@@ -82,4 +82,25 @@ public class StudentTest {
         Assert.assertEquals(expected, output, 0.003);
     }
 
+    @Test
+    public void toStringTest(){
+        // : Given
+        String firstName = "Leon";
+        String lastName = "Hunter";
+        ArrayList<Double> examScores = new ArrayList<>();
+        Student student = new Student(firstName, lastName, examScores);
+        examScores.add(100.0);
+        examScores.add(150.0);
+        examScores.add(250.0);
+        examScores.add(0.0);
+
+
+        // When
+        String output = student.toString();
+
+        // Then
+        System.out.println(output);
+        //return null;
+    }
+
 }

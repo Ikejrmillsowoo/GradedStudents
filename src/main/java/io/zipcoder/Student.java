@@ -1,7 +1,6 @@
 package io.zipcoder;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Student {
     String firstName;
@@ -53,10 +52,17 @@ public class Student {
         return sumOfScores/examScores.size();
     }
 
-    public String toString(){
+    @Override
+    public String toString() {
+        Student student = new Student(this.firstName, this.lastName, this.examScores);
+        System.out.println("Student Name: " + " " + student.firstName + " " + student.lastName);
+        System.out.println("> Average Score: " + student.getAverageExamScore());
+        System.out.println("> Exam Scores: " );
+        for (int i = 0; i < examScores.size(); i++) {
+        System.out.println("\t" +i + " -> " + examScores.get(i));
+    }
 
-        System.out.println("Student name: " + " "+ );
-        return "x";
+        return "";
     }
 
 
